@@ -5,16 +5,21 @@ from typing import List
 
 
 def convert_to_absolute(number: float) -> float:
-    return 0
+    if number < 0:
+        return number *-1
+    return number
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
-
-    return [""]
+    name = []
+    for pre in prefixes:
+        name.append(pre+suffixe)
+    return name
 
 
 def prime_integer_summation() -> int:
+
     return 0
 
 
@@ -23,10 +28,21 @@ def factorial(number: int) -> int:
 
 
 def use_continue() -> None:
-    pass
+    for i in range(1,11):
+        if i==5:
+            continue
+        print(i)
 
+"""Vérifier si un groupe est acceptable selon l'âge de plusieurs personnes faisant partie de plusieurs groupes. Vous devez retourner une liste booléenne. Les conditions d'acceptation sont les suivantes:
+    - Critère de taille: Si le groupe possède plus que 10 membres ou 3 membres et moins, il n'est pas acceptable
+    - Critère d'âge: Si au moins un membre du groupe est mineur, le groupe n'est pas acceptable
+    - Critère d'âge: Si un membre du groupe est plus vieux que 70 ans et qu'un autre membre du groupe à exactement 50 ans, le groupe n'est pas acceptable
+    - Critère d'âge: Si au moins un membre du groupe à exactement 25 ans, alors le groupe est acceptable peut-importe les autres critères d'âges
+"""
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
+    taille = 3 <= len(groups) <= 10
+  
     return []
 
 
